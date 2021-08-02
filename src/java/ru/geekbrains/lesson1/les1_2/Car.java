@@ -1,6 +1,7 @@
 package java.ru.geekbrains.lesson1.les1_2;
 
 public abstract class Car {
+    // Todo: Не создан класс Engine, поэтому создаётся экземпляр несуществующего класса
     public Engine engine;
     private String color;
     private String name;
