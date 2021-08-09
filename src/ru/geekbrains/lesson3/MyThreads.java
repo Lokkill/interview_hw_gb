@@ -6,12 +6,8 @@ public class MyThreads {
 
     public static void main(String[] args) {
         MyThreads myThreads = new MyThreads();
-        Thread t1 = new Thread(() ->{
-            myThreads.printPing();
-        });
-        Thread t2 = new Thread(() ->{
-            myThreads.printPong();
-        });
+        Thread t1 = new Thread(myThreads::printPing);
+        Thread t2 = new Thread(myThreads::printPong);
         t1.start();
         t2.start();
     }
